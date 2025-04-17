@@ -79,3 +79,23 @@ document.addEventListener('DOMContentLoaded', function() {
       origin: 'bottom',
       distance: '60px',
       duration: 100
+  })
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const text = "Optimal Construction & Engineering";
+    const typingEl = document.getElementById("typing");
+  
+    let i = 0;
+    const typeSpeed = 75;
+  
+    function typeWriter() {
+      if (i < text.length) {
+        typingEl.innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, typeSpeed);
+      }
+    }
+  
+    typeWriter();
+  });
+  
